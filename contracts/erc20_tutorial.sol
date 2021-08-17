@@ -1,13 +1,13 @@
 pragma solidity ^0.4.24;
 
 // ----------------------------------------------------------------------------
-// '0Fucks' token contract
+// 'ATC' token contract
 //
-// Deployed to : 0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222
-// Symbol      : 0FUCKS
-// Name        : 0 Fucks Token
-// Total supply: 100000000
-// Decimals    : 18
+// Deployed to : 0xc938e4247800a97D9293FC22eCF6bA5EcE973d9F
+// Symbol      : ATC
+// Name        : ATC
+// Total supply: 1000000000000000
+// Decimals    : 4
 //
 // Enjoy.
 //
@@ -113,10 +113,10 @@ contract FucksToken is ERC20Interface, Owned, SafeMath {
     // Constructor
     // ------------------------------------------------------------------------
     constructor() public {
-        symbol = "0FUCKS";
-        name = "0 Fucks Token";
-        decimals = 18;
-        _totalSupply = 100000000000000000000000000;
+        symbol = "ATC";
+        name = "ATC";
+        decimals = 4;
+        _totalSupply = 1000000000000000000000;
         balances[0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222] = _totalSupply;
         emit Transfer(address(0), 0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222, _totalSupply);
     }
@@ -207,7 +207,7 @@ contract FucksToken is ERC20Interface, Owned, SafeMath {
 
 
     // ------------------------------------------------------------------------
-    // Don't accept ETH
+    //  accept ETH
     // ------------------------------------------------------------------------
     function () public payable {
         revert();
